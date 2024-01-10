@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:1.24.0-alpine
+    container_name: web_app_nginx
+    ports:
+      - '80:80'
+    volumes:
+      - ./public:/var/www/public
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - web_app
+
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    container_name: web_app_php
+    volumes:
+      - ./:/var/www
+      - ./docker/php/conf.d/php.ini:/usr/local/etc/php/php.ini
+    depends_on:
+      - nginx
+      - postgresql
+    networks:
+      - web_app
+
+  postgresql:
+    image: postgres:15.3-alpine
+    container_name: web_app_postgresql
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: web_app
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+    networks:
+      - web_app
+
+  adminer:
+    image: adminer:4.8.1
+    container_name: web_app_adminer
+    ports:
+      - '8080:8080'
+    depends_on:
+      - postgresql
+    environment:
+      ADMINER_DEFAULT_SERVER: postgresql
+    networks:
+      - web_app
+
+networks:
+  web_app:
+    name: web_app
+
+volumes:
+  postgresql_data:
+    name: web_app_postgresql_data
+  redis_data:
+    name: web_app_redis_data
