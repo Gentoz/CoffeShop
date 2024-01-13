@@ -68,13 +68,13 @@
                 />
             </svg>
             <span
-            >Пролистнуть вниз <br>
-            чтобы изучить больше</span
+            ><strong>Пролистнуть вниз</strong> <br>
+            <strong>чтобы изучить больше</strong></span
             >
         </a>
     </div>
 </section>
-<section class="brands" id="brands">
+<div class="brands" id="brands">
     <img class="bottom-img" src="./images/coffee-beans.png" alt="coffee beans">
     @php
         $products = \App\Models\Products::get();
@@ -92,7 +92,7 @@
             </div>
         @endforeach
     @endif
-</section>
+</div>
 <footer>
     <div class="logo">
         <span class="dot"></span>
@@ -101,9 +101,9 @@
         <span class="dot"></span>
     </div>
     <div class="desc">
-        <h3>Один глоток - Забудешь обо всём</h3>
+        <h3><em>Один глоток - Забудешь обо всём</em></h3>
         <p>
-            Сайт сделал Кузнецов Сергей группа ПИН-201
+            &copy Сайт сделал Кузнецов Сергей группа ПИН-201
         </p>
     </div>
 </footer>
