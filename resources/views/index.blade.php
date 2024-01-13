@@ -3,11 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description" content="site about coffee">
     <title>Coffee Shop</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css"/>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
     <script src="./js/script.js"></script>
 </head>
 <body>
@@ -16,11 +15,11 @@
         <nav>
             <div class="logo">
                 <span class="dot"></span>
-                Coffee <br/>
+                Coffee <br>
                 Shop
                 <span class="dot"></span>
             </div>
-            <input type="checkbox" id="check"/>
+            <input type="checkbox" id="check">
             <label for="check" class="menu">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +50,7 @@
         </div>
     </div>
     <div class="hero-bg">
-        <img src="./images/cup_of_coffee.png" alt="cup of coffee"/>
+        <img src="./images/cup_of_coffee.png" alt="cup of coffee">
     </div>
     <div class="scroll">
         <a href="#brands">
@@ -69,14 +68,14 @@
                 />
             </svg>
             <span
-            >Пролистнуть вниз <br/>
+            >Пролистнуть вниз <br>
             чтобы изучить больше</span
             >
         </a>
     </div>
 </section>
 <section class="brands" id="brands">
-    <img class="bottom-img" src="./images/coffee-beans.png" alt="coffee beans"/>
+    <img class="bottom-img" src="./images/coffee-beans.png" alt="coffee beans">
     @php
         $products = \App\Models\Products::get();
     @endphp
@@ -84,7 +83,7 @@
         @foreach($products as $product)
             <div class="brand">
                 <div class="img">
-                    <img src="{{ $product->url }}" alt="{{ $product->title }}"/>
+                    <img src="{{ $product->url }}" alt="{{ $product->title }}">
                 </div>
                 <div class="desc">
                     <h2>{{ $product->title }}</h2>
@@ -97,7 +96,7 @@
 <footer>
     <div class="logo">
         <span class="dot"></span>
-        Coffee <br/>
+        Coffee <br>
         Shop
         <span class="dot"></span>
     </div>
