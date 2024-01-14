@@ -10,11 +10,6 @@ class IndexController extends Controller
     {
         $products = Product::all();
 
-        abort_if(
-            $products->isEmpty(),
-            404
-        );
-
         return view('index', ['products' => $products]);
     }
 }
