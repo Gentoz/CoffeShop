@@ -28,6 +28,7 @@ class ProductsResource extends ModelResource
                 ID::make()->sortable(),
                 Text::make('Заголовок', 'title'),
                 Text::make('Текст', 'text'),
+                Text::make('Цена', 'price'),
                 Image::make('Картинка', 'url')->disk('public_folder')->dir('images'),
             ]),
         ];
@@ -35,6 +36,11 @@ class ProductsResource extends ModelResource
 
     public function rules(Model $item): array
     {
-        return [];
+        return [
+            'title' => ['required', 'string'],
+            'text' => ['required', 'string'],
+            'price' => ['integer'],
+            'url' => ['required', 'file'],
+        ];
     }
 }
