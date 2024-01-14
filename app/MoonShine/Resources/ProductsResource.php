@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Products;
+use App\Models\Product;
 
 use MoonShine\Fields\Image;
+use MoonShine\Fields\Number;
 use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
@@ -15,7 +16,7 @@ use MoonShine\Fields\ID;
 
 class ProductsResource extends ModelResource
 {
-    protected string $model = Products::class;
+    protected string $model = Product::class;
 
     protected string $title = 'Товары';
 
@@ -28,8 +29,8 @@ class ProductsResource extends ModelResource
                 ID::make()->sortable(),
                 Text::make('Заголовок', 'title'),
                 Text::make('Текст', 'text'),
-                Text::make('Цена', 'price'),
-                Image::make('Картинка', 'url')->disk('public_folder')->dir('images'),
+                Number::make('Цена', 'price'),
+                Image::make('Картинка', 'url')->disk('public')->dir('products'),
             ]),
         ];
     }

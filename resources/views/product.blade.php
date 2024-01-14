@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="site about coffee">
     <title>Coffee Shop</title>
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
-    <script src="./js/script.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
+    <script src="/js/script.js"></script>
 </head>
 <body>
 <section class="hero">
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="hero-bg">
-        <img src="./images/cup_of_coffee.png" alt="cup of coffee">
+        <img src="/images/cup_of_coffee.png" alt="cup of coffee">
     </div>
     <div class="scroll">
         <a href="#brands">
@@ -75,7 +75,16 @@
     </div>
 </section>
 <div class="brands" id="brands">
-  123
+    <div class="brand">
+        <div class="img">
+            <img src="/storage/{{$product->url}}" alt="{{ $product->title }}">
+        </div>
+        <div class="desc">
+            <h2>{{ $product->title }}</h2>
+            <p>{{ $product->text }}</p>
+            <p>{{ $product->price }}</p>
+        </div>
+    </div>
 </div>
 <footer>
     <div class="logo">

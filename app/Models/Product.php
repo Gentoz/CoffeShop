@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\Sitemap\Contracts\Sitemapable;
 use Spatie\Sitemap\Tags\Url;
 
-class Products extends Model implements Sitemapable
+class Product extends Model implements Sitemapable
 {
     protected $fillable = [
         'title',
@@ -17,6 +17,6 @@ class Products extends Model implements Sitemapable
 
     public function toSitemapTag(): Url|string|array
     {
-        // TODO: Implement toSitemapTag() method.
+        return route('product.show', $this);
     }
 }

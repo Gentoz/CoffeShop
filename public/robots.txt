@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://24coffe-shop.ru/sitemap.xml

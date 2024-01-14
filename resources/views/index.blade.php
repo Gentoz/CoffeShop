@@ -76,21 +76,20 @@
 </section>
 <div class="brands" id="brands">
     <img class="bottom-img" src="./images/coffee-beans.png" alt="coffee beans">
-    @php
-        $products = \App\Models\Products::get();
-    @endphp
     @if(!empty($products))
         @foreach($products as $product)
-            <div class="brand">
-                <div class="img">
-                    <img src="{{ $product->url }}" alt="{{ $product->title }}">
+            <a href="{{ route('product.show', ['product' => $product->id]) }}">
+                <div class="brand">
+                    <div class="img">
+                        <img src="/storage/{{$product->url}}" alt="{{ $product->title }}">
+                    </div>
+                    <div class="desc">
+                        <h2>{{ $product->title }}</h2>
+                        <p>{{ $product->text }}</p>
+                        <p>{{ $product->price }}</p>
+                    </div>
                 </div>
-                <div class="desc">
-                    <h2>{{ $product->title }}</h2>
-                    <p>{{ $product->text }}</p>
-                    <p>{{ $product->price }}</p>
-                </div>
-            </div>
+            </a>
         @endforeach
     @endif
 </div>
