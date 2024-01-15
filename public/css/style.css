@@ -207,6 +207,15 @@ a:hover {
     margin-bottom: 10px;
   flex: 1;
 }
+@media (max-width: 768px) {
+    .brands .desc{
+        font-size: 16px;
+    }
+    .brand .img {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
 .row-reverse {
   flex-direction: row-reverse;
 }
