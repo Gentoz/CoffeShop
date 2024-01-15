@@ -29,12 +29,12 @@
 <section class="hero">
     <header>
         <nav>
-            <div class="logo">
+            <a class="logo" href="https://24coffe-shop.ru/">
                 <span class="dot"></span>
                 Coffee <br>
                 Shop
                 <span class="dot"></span>
-            </div>
+            </a>
             <input type="checkbox" id="check">
             <label for="check" class="menu">
                 <svg
@@ -53,6 +53,7 @@
             </label>
             <div class="nav-links">
                 <a href="https://vk.com/sergokuznecov" target="_blank">Связаться с нами</a>
+                <a href="https://24coffe-shop.ru/sitemap.xml" target="_blank">Карта сайта</a>
             </div>
         </nav>
     </header>
@@ -110,12 +111,12 @@
     @endif
 </div>
 <footer>
-    <div class="logo">
+    <a class="logo" href="https://24coffe-shop.ru/">
         <span class="dot"></span>
         Coffee <br>
         Shop
         <span class="dot"></span>
-    </div>
+    </a>
     <div class="desc">
         <h3><em>Один глоток - Забудешь обо всём</em></h3>
         <p>
