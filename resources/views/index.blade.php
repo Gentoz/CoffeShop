@@ -18,6 +18,7 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/96130221" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     <meta charset="utf-8">
+    <meta name="keywords" content="coffee, coffee-shop, coffee-site">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="site about coffee">
     <title>Coffee Shop</title>
@@ -102,8 +103,9 @@
                     </div>
                     <div class="desc">
                         <h2>{{ $product->title }}</h2>
-                        <p>{{ $product->text }}</p>
-                        <p>{{ $product->price }}</p>
+                        <p>Описание: {{ $product->text }}</p>
+                        <br>
+                        <p>Цена: {{ $product->price }} руб.</p>
                     </div>
                 </div>
             </a>
