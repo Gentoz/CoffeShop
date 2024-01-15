@@ -215,6 +215,9 @@ a:hover {
         margin-top: 5px;
         margin-bottom: 5px;
     }
+    .brand .img  img {
+        display: inline-block;
+    }
 }
 .row-reverse {
   flex-direction: row-reverse;
