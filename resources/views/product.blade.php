@@ -28,7 +28,7 @@
     </div>
 </div>
 <footer>
-    <a class="logo" href="{{ route('index) }}">
+    <a class="logo" href="{{ route('index') }}">
         <span class="dot"></span>
         Coffee <br>
         Shop
