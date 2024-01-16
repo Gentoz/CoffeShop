@@ -57,7 +57,7 @@ nav {
   margin-right: 1rem;
 }
 a:hover {
-  color: var(--blue);
+  color: var(--red);
 }
 .nav-links a::after {
   content: "";
@@ -75,6 +75,21 @@ a:hover {
 }
 .nav-links .active {
   color: var(--blue);
+}
+
+.back-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: auto;
+}
+
+.back-link .back-icon {
+    margin-right: 5px;
 }
 
 /* Scroll Bar */
