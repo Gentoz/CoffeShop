@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="keywords" content="coffee, coffee-shop, coffee-site">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="site about coffee">
-    <title>Coffee Shop</title>
+    <meta name="description" content="{{ $product->text }}">
+    <title>{{ $product->title }}</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css">
 </head>
 <body>
 <a href="{{ route('index') }}" class="back-link">
