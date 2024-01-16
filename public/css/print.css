@@ -1,0 +1,11 @@
+@media print {
+    /* Скрываем ненужные элементы */
+    header, nav, .menu {
+        display: none;
+    }
+
+    /* Увеличиваем размер шрифта */
+    body {
+        font-size: 16px;
+    }
+}

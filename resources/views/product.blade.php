@@ -24,6 +24,7 @@
     <title>Coffee Shop</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" media="print" href="./css/print.css">
     <script src="/js/script.js"></script>
 </head>
 <body>
@@ -93,6 +94,7 @@
         </a>
     </div>
 </section>
+<a href="https://24coffe-shop.ru/">Вернуться назад</a>
 <div class="brands" id="brands">
     <div class="brand">
         <div class="img">
