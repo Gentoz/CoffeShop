@@ -8,8 +8,6 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $products = Product::all();
-
-        return view('index', ['products' => $products]);
+        return view('index', ['products' => Product::paginate(5)]);
     }
 }
